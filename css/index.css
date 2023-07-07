@@ -1,91 +1,54 @@
-/* 共通スタイル */
-/* ヘッダー */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-  }
-  
-  h1 {
-    margin: 0;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  nav li {
-    display: inline;
-    margin-right: 10px;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /* メインコンテンツ */
-  main {
-    margin: 20px;
-  }
-  
-  section {
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    color: #333;
-  }
-  
-  ul {
-    list-style-type: disc;
-    margin-left: 20px;
-  }
-  
-  /* サイドバー */
-  aside {
-    background-color: #f4f4f4;
-    padding: 20px;
-  }
-  
-  /* フッター */
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  /* スマートフォン用スタイル */
-  @media screen and (max-width: 767px) {
-    header {
-      padding: 10px;
-    }
-  
-    h1 {
-      font-size: 24px;
-    }
-  
-    nav li {
-      display: block;
-      margin: 10px 0;
-    }
-  
-    main {
-      margin: 10px;
-    }
-  
-    ul {
-      margin-left: 0;
-    }
-  
-    aside {
-      padding: 10px;
-    }
-  
-    footer {
-      padding: 5px;
-    }
-  }
-  
+@charset "utf-8";
+
+/*========= 背景動画設定のCSS ===============*/
+
+/*header設定*/
+#header{
+    position: relative;/*h1の中央寄せ配置の起点とするためのrelative*/
+    height: 100vh;/*高さを全画面にあわせる*/
+} 
+
+#video-area{
+    position: fixed;
+    z-index: -1;/*最背面に設定*/
+    top: 0;
+    right:0;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+}
+
+#video {
+    /*天地中央配置*/
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*縦横幅指定*/
+    width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+}
+
+/*見出し設定*/
+h1{
+    /*要素の配置*/
+    position:absolute;
+    /*要素を天地中央寄せ*/
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    /*見た目の調整*/
+    color:#fff;
+    text-shadow: 0 0 15px #666;
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+#container{
+	background:#fff;
+	padding:300px 0;
+	text-align: center;
+}

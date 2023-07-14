@@ -1,4 +1,9 @@
 @charset "utf-8";
+@media screen and (max-width: 600px) {
+  #container {
+    padding: 50px 0;
+  }
+}
 
 /*========= 背景動画設定のCSS ===============*/
 

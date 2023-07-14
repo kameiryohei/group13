@@ -1,60 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>猫の世界へようこそ</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+<meta charset="utf-8">
+<title>猫紹介ホームページ</title>
+<meta name="description"  content="研究開発リテラシー１３班">
+<script src="js/script.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link href="css/index.css" rel="stylesheet">
 </head>
+
 <body>
-  <header class="header">
-    <img src="images/common/neko2.png" alt="ロゴ">
-    <button class="toggle-menu-button"></button>
-    <h1>猫の世界へようこそ</h1>
-    <nav>
+<header id="header">
+  <h1>猫の世界へようこそ！！</h1>
+  <div id="video-area">
+    <video id="video" poster="images/common/nekomovie.png" webkit-playsinline playsinline muted autoplay loop>
+      
+      <source src="movies/167029.mp4" type="video/mp4">
+      <p>動画を再生できる環境ではありません。</p>
+    </video>
+  <!--/video-area--></div>
+  
+  <div class="header-site-menu">
+    <nav class="site-menu">
       <ul>
-        <li><a href="concept.html">猫について</a></li>
-        <li><a href="members.html">猫の種類</a></li>
-        <li><a href="access.html">猫の世話</a></li>
+        <li><a href="concept.html">コンセプト</a></li>
+        <li><a href="members.html">メンバー</a></li>
+        <li><a href="access.html">アクセス</a></li>
       </ul>
     </nav>
-  </header>
+  </div>
+</header>
+<div id="container">
+<main>
+  <section id="about">
+    <h2>猫について</h2>
+    <p>猫は人間の友達であり、癒しの存在です。...</p>
+    <!-- その他の猫に関する情報を追加 -->
+  </section>
 
-  <main>
-    <section id="about">
-      <h2>猫について</h2>
-      <p>猫は人間の友達であり、癒しの存在です。...</p>
-      <!-- その他の猫に関する情報を追加 -->
-    </section>
+  <section id="breeds">
+    <h2>猫の種類</h2>
+    <ul>
+      <li>アビシニアン</li>
+      <li>スコティッシュフォールド</li>
+      <li>マンチカン</li>
+      <!-- 他の猫の種類を追加 -->
+    </ul>
+  </section>
+</main>
 
-    <section id="breeds">
-      <h2>猫の種類</h2>
-      <ul>
-        <li>アビシニアン</li>
-        <li>スコティッシュフォールド</li>
-        <li>マンチカン</li>
-        <!-- 他の猫の種類を追加 -->
-      </ul>
-    </section>
-  </main>
+<aside>
+  <section id="care">
+    <h2>猫の世話</h2>
+    <p>猫の世話には次のようなことが必要です:</p>
+    <ul>
+      <li>食事</li>
+      <li>トイレの掃除</li>
+      <li>適切な運動と遊び</li>
+      <!-- 他の猫の世話に関する情報を追加 -->
+    </ul>
+  </section>
+</aside>
 
-  <aside>
-    <section id="care">
-      <h2>猫の世話</h2>
-      <p>猫の世話には次のようなことが必要です:</p>
-      <ul>
-        <li>食事</li>
-        <li>トイレの掃除</li>
-        <li>適切な運動と遊び</li>
-        <!-- 他の猫の世話に関する情報を追加 -->
-      </ul>
-    </section>
-  </aside>
-
-  <footer>
-    <p>© 2023 研究開発リテラシー１３班</p>
-  </footer>
-
-  
+<footer>
+  <p>© 2023 研究開発リテラシー１３班</p>
+</footer>
+</div>
 </body>
 </html>

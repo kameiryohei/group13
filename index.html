@@ -7,6 +7,7 @@
 <script src="js/script.js"></script>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link href="css/index.css" rel="stylesheet">
+<link rel="icon" href="images/common/neko.jpg"> <!-- faviconを設定 -->
 </head>
 
 <body>
@@ -16,6 +17,7 @@
     <video id="video" poster="images/common/nekomovie.png" webkit-playsinline playsinline muted autoplay loop>
       
       <source src="movies/167029.mp4" type="video/mp4">
+      <source src="movies/167029.webm" type="video/webm"> <!-- webmフォーマットを追加 -->
       <p>動画を再生できる環境ではありません。</p>
     </video>
   <!--/video-area--></div>
@@ -33,6 +35,7 @@
 </header>
 <div id="container">
 <main>
+  <article> <!-- articleタグを追加 -->
   <section id="about">
     <h2>猫について</h2>
     <p>猫は人間の友達であり、癒しの存在です。
@@ -43,6 +46,7 @@
   </section>
 
   
+</article>
 </main>
 
 <aside>
@@ -56,6 +60,14 @@
       <!-- 他の猫の世話に関する情報を追加 -->
     </ul>
   </section>
+  
+  <section id="news"> <!-- newsセクションを追加 -->
+    <h2>猫のニュース</h2>
+    <ul>
+      <li><a href="https://www.bing.com/news/search?q=%E7%8C%AB&FORM=HDRSC6">猫に関する最新ニュースをBingで検索する</a></li>
+      <!-- Bing News Search APIを使って猫に関する最新ニュースを取得して表示する -->
+    </ul>
+  </section>
 </aside>
 
 <footer class="footer">
@@ -63,7 +75,7 @@
   <a class="footer-logo" href="index.html">
       <img src="images/common/neko.jpg" alt="ロゴ">
   </a>
-  <p class="copyright"><small>&copy;研究開発リテラシー１３班</small></p>
+  <p class="copyright"><small>©研究開発リテラシー１３班</small></p>
 </footer>
 </div>
 </body>

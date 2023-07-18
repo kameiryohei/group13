@@ -1,82 +1,65 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<title>猫紹介ホームページ</title>
-<meta name="description"  content="研究開発リテラシー１３班">
-<script src="js/script.js"></script>
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<link href="css/index.css" rel="stylesheet">
-<link rel="icon" href="images/common/neko.jpg"> <!-- faviconを設定 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/index.css" rel="stylesheet">
+    <script src="js/script.js"></script>
 </head>
-
 <body>
-<header id="header">
-  <h1>猫の世界へようこそ！！</h1>
-  <div id="video-area">
-    <video id="video" poster="images/common/nekomovie.png" webkit-playsinline playsinline muted autoplay loop>
-      
-      <source src="movies/167029.mp4" type="video/mp4">
-      <source src="movies/167029.webm" type="video/webm"> <!-- webmフォーマットを追加 -->
-      <p>動画を再生できる環境ではありません。</p>
-    </video>
-  <!--/video-area--></div>
-  
-  <div class="header-site-menu">
-    <nav class="site-menu">
-      <ul>
-        
-        <li><a href="concept.html">このサイトについて</a></li>
-        <li><a href="members.html">猫の種類</a></li>
-        <li><a href="access.html">猫カフェ紹介</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<div id="container">
-<main>
-  <article> <!-- articleタグを追加 -->
-  <section id="about">
-    <h2>猫について</h2>
-    <p>猫は人間の友達であり、癒しの存在です。
-
-      このサイトでは、猫好きの大学二年生が猫の魅力を紹介します。
-    </p>
+    <header class="header">
+        <div class="header-inner">
+            <div class="header_wrap">
+                <div class="header_movie">
+                  <video autoplay="" loop="" playsinline="" muted="" src="movies/neko.mp4".mp4"></video>
+                </div>
+                <div class="header_text">
+                  <h2>猫の世界へようこそ！</h2>
+                  <h3>研究開発リテラシー１３班</h3>
+                </div>
+                <div class="arrow_wrap">
+                  <div class="down">Page Down</div>
+                  <div class="arrow"></div>
+                </div>
+              </div>
+              <div class="header-site-menu">
+                <nav class="site-menu">
+                    <ul>
+                        <li><a href="concept.html">コンセプト</a></li>
+                        <li><a href="members.html">メンバー</a></li>
+                        <li><a href="access.html">アクセス</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="first-view">
+            <div class="first-view-text">
+                <h1>名城大学情報工学部</h1>
+                <p>想像以上を，創造しよう．</p>
+                <p>名城大学 天白キャンパス
+                    〒468-8502
+                    名古屋市天白区塩釜口一丁目501番地
+                    公共交通機関でのアクセス
+                    地下鉄鶴舞線 「塩釜口／名城大学前」駅下車、1番出口 徒歩約4分</p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <nav class="site-menu">
+            <ul>
+                <li><a href="concept.html">コンセプト</a></li>
+                <li><a href="members.html">メンバー</a></li>
+                <li><a href="access.html">アクセス</a></li>
+            </ul>
+        </nav>
+        <a class="footer-logo" href="index.html">
+            <img src="images/common/logo_footer.png" alt="ロゴ">
+        </a>
+        <p class="copyright"><small>&copy;名城大学情報工学部(嘘)</small></p>
+    </footer>
     
-  </section>
-
-  
-</article>
-</main>
-
-<aside>
-  <section id="care">
-    <h2>猫の世話</h2>
-    <p>猫の世話には次のようなことが必要です:</p>
-    <ul>
-      <li>食事</li>
-      <li>トイレの掃除</li>
-      <li>適切な運動と遊び</li>
-      <!-- 他の猫の世話に関する情報を追加 -->
-    </ul>
-  </section>
-  
-  <section id="news"> <!-- newsセクションを追加 -->
-    <h2>猫のニュース</h2>
-    <ul>
-      <li><a href="https://www.bing.com/news/search?q=%E7%8C%AB&FORM=HDRSC6">猫に関する最新ニュースをBingで検索する</a></li>
-      <!-- Bing News Search APIを使って猫に関する最新ニュースを取得して表示する -->
-    </ul>
-  </section>
-</aside>
-
-<footer class="footer">
-  
-  <a class="footer-logo" href="index.html">
-      <img src="images/common/neko.jpg" alt="ロゴ">
-  </a>
-  <p class="copyright"><small>©研究開発リテラシー１３班</small></p>
-</footer>
-</div>
 </body>
 </html>

@@ -1,6 +1,12 @@
 @charset "utf-8";
 /* 
  */ 
+ 
+ .first-view-text h1 {
+	font-size: 50px;
+	font-family: 'IBM Plex Sans JP', sans-serif;
+	
+}
 .home-header, .home .jumbotron{
 	display: none;
 }
@@ -13,50 +19,63 @@
 	z-index: 2;
 }
 
-.header-site-menu {
-  position: absolute;
-  top: 15px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  z-index: 10;
-  padding-right: 50px;
-}
-
-.site-menu {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.site-menu ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.site-menu li {
-  margin-left: 40px;
-}
-
-.site-menu a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 24px;
-}
-
-/* ... */
 .header_wrap{
 	position: relative;
 	width: 100%;
 	height: 100vh;
 	margin: 0 calc(50% - 50vw);
-  margin-top: 0;
 }
+.header-site-menu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 15px;
+	z-index: 6;
+	transition: top 0.3s;
+	display: none;
+	font-family: 'Zen Maru Gothic', sans-serif;
+  }
+
+  .header-site-menu.active {
+    display: block;
+	top: 70px;
+}
+  
+  .header-site-menu.scrolled {
+	top: 20px;
+  }
+  .site-menu ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .down {
+    border-bottom: 2px solid rgb(255, 255, 255); /* Change the color and size as needed */
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Add this CSS to change the appearance when hovering over the "down" class */
+.down:hover {
+    border-bottom: 2px solid rgb(210, 122, 50); /* Change the color to your preferred hover color */
+}
+  .site-menu li {
+	margin-left: 20px;
+  }
+  
+  .site-menu a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 25px;
+	transition: color 0.3s;
+  }
+  
+  .site-menu a:hover {
+	color: #dd5c20;
+  }
+
 .header_movie{
 	overflow: hidden;
 	position: absolute;
@@ -82,6 +101,7 @@
 	height: auto;
 }
 .header_text{
+	font-family: 'IBM Plex Sans JP', sans-serif;
 	position: absolute;
 	z-index: 2;
 	left: 50%;
@@ -121,3 +141,217 @@
 	color: #fff;
 	z-index: 2;
 }
+.first-view-text h1 {
+    text-align: center;
+}
+
+
+.footer {
+	text-align: center; /* テキストを中央に配置 */
+	background-color: #9c441b; /* フッターの背景色を設定 */
+	padding: 20px; /* フッターの上下に余白を追加 */
+}
+	  
+	  /* ロゴ画像に対してスタイルを適用します */
+.footer-logo img {
+	max-width: 30%; /* 画面に収まるように画像のサイズを調整 */
+}
+	  
+	  /* コピーライトのテキストに対してスタイルを適用します */
+.footer p {
+	margin: 10px 0; /* テキストの上下に余白を追加 */
+	color: #f0c5b1; /* テキストの色を設定 */
+}
+.image img[src$="neko-main1.jpg"],
+.image img[src$="neko-main2.jpg"] {
+    width: 300px;
+    height: 330px;
+    object-fit: cover;
+}
+
+
+/* Hamburger Menu */
+/* Hamburger Menu */
+.hamburger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    transition: top 0.5s;
+	z-index: 8;
+}
+.hamburger-menu img {
+    width: 100%;
+    height: 100%;
+}
+.image-container1{
+	text-align:right;
+}
+.image-container1 img{
+	width: 50%;
+	height: auto;
+	
+	
+}
+.image-container2 img{
+	width: 50%;
+	height: auto;
+}
+
+.flex {
+	display: flex;
+	position: relative;
+	margin-right: 20px; /* 文字と画像の間隔を調整 */
+	font-family: 'Zen Maru Gothic', sans-serif;
+	 /*横並び*/
+  }
+  .flex .image {
+	width: 940px; /*画像サイズ指定*/
+	margin: 0;
+	padding: 0;
+  }
+  .flex .image img {
+	width: 700px; /* 画像の幅を調整 */
+  	height: auto; /* アスペクト比を保持 */
+ 	 object-fit: cover;
+	height: auto;
+	
+  }
+  
+  .flex .text {
+	margin: 0 0 0 20px;
+	padding: 0;
+	font-size: 30px;
+  }
+  .centered {
+	text-align: center;
+	font-size: 28px;
+	font-family: 'Zen Maru Gothic', sans-serif;
+  }
+  .image img:hover {
+    outline: 6px solid rgb(230, 121, 58);
+}
+
+	.image img {
+    transition: outline 0.2s;
+}
+.header-site-menu.scrolled {
+    transform: translateY(-1px);
+}
+.overlay.open + .header .header-site-menu {
+    background-color: rgba(218, 64, 64, 0.5);
+}
+
+
+  
+  
+ 
+  
+/* Media Queries */
+
+/* スマホ画面のスタイル */
+@media screen and (max-width: 768px) {
+	.header-site-menu .site-menu ul li a {
+	  font-size: 18px;
+	}
+  
+	.header-site-menu .site-menu ul {
+	  display: flex;
+	  flex-direction: column;
+	}
+  
+	.centered,
+	.flex .text {
+	  font-size: 18px; /* 大きくしたい文字サイズに調整 */
+	  
+	}
+  
+	body {
+	  font-size: 15px;
+	}
+  
+	.header_text h2 {
+	  font-size: 1.8rem; /* Change the font size for the h2 in the header text */
+	}
+  
+	.header_text h3 {
+	  font-size: 1rem; /* Change the font size for the h3 in the header text */
+	}
+  
+	.site-menu {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
+	.site-menu li {
+	  margin: 10px 0;
+	  border-top: 1px solid #ddd; /* 仕切りのスタイルを追加 */
+	  padding-top: 10px; /* 仕切りとテキストの間の余白を調整 */
+	}
+  
+	.site-menu a {
+	  font-size: 1.0rem; /* Change the font size of the links in the header site menu */
+	}
+  
+	.hamburger-menu {
+	  top: 10px;
+	  right: 10px;
+	  width: 12%; 
+	  height: 5%;
+	}
+  
+	.header-site-menu {
+	  top: 60px;
+	  right: 0;
+	  padding: 10px;
+	  background-color: #968860; /* Change the background color of the hamburger menu when opened */
+	}
+  
+	.header-site-menu.active {
+	  top: 80px;
+	}
+  
+	.site-menu a:hover {
+	  color: #dd5c20; /* Change the color of the links when hovered in the header site menu */
+	}
+  
+	.site-menu li:first-child {
+	  margin-top: 0; /* 最初のメニュー項目には余白を追加しない */
+	  border-top: none; /* 最初のメニュー項目には仕切りを表示しない */
+	  padding-top: 0; /* 最初のメニュー項目には余白を追加しない */
+	}
+  
+	/* 画像のスタイル */
+	.flex .image img {
+	  width: 110%; /* 画像の幅を100%に設定 */
+	  height: 100%; /* 画像の縦幅を自動調整 */
+	  object-fit: cover;
+	}
+  }
+  
+  /* style.css */
+  .overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒いオーバーレイ */
+	z-index: 11; /* ヘッダーサイトメニューより手前に表示するためのZ-index */
+	display: none;
+  }
+  
+  .header-site-menu.active + .overlay {
+	display: block; /* ハンバーガーメニューがアクティブな時にオーバーレイを表示する */
+  }
+  
+  .main {
+	background-color: rgb(218, 190, 127);
+  }
+  

@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>猫紹介サイト　ホーム</title>
     <link href="css/index.css" rel="stylesheet">
-    <script src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@200&display=swap" rel="stylesheet">
+    <script src="javasript/index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
             <div class="header_wrap">
                 <div class="header_movie">
-                  <video autoplay="" loop="" playsinline="" muted="" src="movies/neko.mp4".mp4"></video>
+                  <video autoplay="" loop="" playsinline="" muted="" src="movies/neko.mp4"></video>
                 </div>
                 <div class="header_text">
                   <h2>猫の世界へようこそ！</h2>
-                  <h3>研究開発リテラシー１３班</h3>
+                  <h3>研究開発リテラシー<br>１３班</h3>
                 </div>
                 <div class="arrow_wrap">
                   <div class="down">Page Down</div>
@@ -26,39 +34,55 @@
               <div class="header-site-menu">
                 <nav class="site-menu">
                     <ul>
-                        <li><a href="concept.html">コンセプト</a></li>
-                        <li><a href="members.html">メンバー</a></li>
-                        <li><a href="access.html">アクセス</a></li>
+                        <li><a href="concept.html">このサイトについて</a></li>
+                        <li><a href="members.html">猫の種類紹介</a></li>
+                        <li><a href="access.html">猫カフェ紹介</a></li>
+                        <li><a href="attention.html">猫の注意点</a></li>
                     </ul>
                 </nav>
             </div>
+            <!-- Hamburger Menu -->
+            <button class="hamburger-menu" onclick="toggleMenu()">
+                <img src="images/hambager.png" alt="Hamburger Menu">
+            </button>
         </div>
     </header>
+    <div class="overlay" onclick="toggleMenu()"></div>
+  
     <main class="main">
         <div class="first-view">
             <div class="first-view-text">
-                <h1>名城大学情報工学部</h1>
-                <p>想像以上を，創造しよう．</p>
-                <p>名城大学 天白キャンパス
-                    〒468-8502
-                    名古屋市天白区塩釜口一丁目501番地
-                    公共交通機関でのアクセス
-                    地下鉄鶴舞線 「塩釜口／名城大学前」駅下車、1番出口 徒歩約4分</p>
+                <h1>猫の魅力</h1>
+                <p class="centered">猫は私たちにとって癒しの存在であり、
+                    また、猫は私たちの生活に欠かせない存在です。
+                    <br>そんな猫の魅力を紹介します。</p>
+                </p>
+                <div class="flex">
+                    <figure class="image"><img src="images/neko-main1.jpg" alt=""></figure>
+                      <p class="text">猫魅力の一つ目に圧倒的癒し力があります！
+                        <br>嫌なことがあっても、猫を見ているだけで不思議と幸せな気分になること間違いなし！<br>また猫は優しくなでると気持ちのよさそうな顔するのでそれを見ているだけでもほっこりします。</p>
+                  </div>
+                  <div class="flex">
+                      <p class="text">二つ目に、猫は人間の気持ちを理解してくれます。
+                        猫は人間の気持ちを理解してくれるので、例えば、悲しんでいるときには優しくなでてくれたり、喜んでいるときには一緒に遊んでくれたりします。猫は
+                        人間の声や表情や態度から感情を読み取ることができます。猫は人間のパートナーとして、心の支えになってくれます。</p>
+                      <figure class="image"><img src="images/neko-main-2.jpg" align="right"></figure>
+                  </div>
+               
+                  <p class="centered">
+                そんな猫について、①このサイトのコンセプト②猫の種類③猫と触れ合えるおすすめの猫カフェ④猫に関する注意点について紹介しています。
+                <br>上のメニューバーから閲覧してください！
+                <br>猫のことをもっと好きになること間違いなしです！
+                </p1>
             </div>
         </div>
     </main>
     <footer class="footer">
-        <nav class="site-menu">
-            <ul>
-                <li><a href="concept.html">コンセプト</a></li>
-                <li><a href="members.html">メンバー</a></li>
-                <li><a href="access.html">アクセス</a></li>
-            </ul>
-        </nav>
+        
         <a class="footer-logo" href="index.html">
-            <img src="images/common/logo_footer.png" alt="ロゴ">
+            <img src="images/neko-kage.png" alt="ロゴ">
         </a>
-        <p class="copyright"><small>&copy;名城大学情報工学部(嘘)</small></p>
+        <p class="copyright"><small>&copy;研究開発リテラシー１３班</small></p>
     </footer>
     
 </body>

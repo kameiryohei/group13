@@ -1,0 +1,72 @@
+.title {
+    height: 510px;
+    background-image: url(../images/members/neko_oyako.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 10px #4b2c14;
+}
+
+.main {
+    background-color: #fff4d2;
+}
+
+.member-list {
+    padding-top: 70px;
+    padding-bottom: 50px;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+.member-list li {
+    flex-shrink: 10;
+    width: 100%;
+    margin-left: auto;
+}
+
+.member-list li:first-child {
+    margin-left: 0;
+}
+
+p.cat01{
+    display: flex;
+    overflow: scroll;
+    margin-top: 20px;
+}
+
+p.cat01 img {
+    display: block;
+    height: auto;
+}
+
+p.text01 {
+    margin-top: 15px;
+}
+
+p.cat02 {
+    display: flex;
+    overflow: scroll;
+    margin-top: 20px;
+}
+
+p.cat02 img {
+    display: block;
+    height: auto;
+}
+
+p.cat03{
+    display: flex;
+    overflow: scroll;
+    margin-top: 20px;
+}
+
+p.cat03 img {
+    display: block;
+    height: auto;
+}
+

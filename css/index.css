@@ -1,7 +1,10 @@
 @charset "utf-8";
 /* 
  */ 
- 
+ body {
+	margin: 0;
+  }
+  
  .first-view-text h1 {
 	font-size: 50px;
 	font-family: 'IBM Plex Sans JP', sans-serif;
@@ -329,10 +332,20 @@
   
 	/* 画像のスタイル */
 	.flex .image img {
-	  width: 110%; /* 画像の幅を100%に設定 */
+	  width: 100%; /* 画像の幅を100%に設定 */
 	  height: 100%; /* 画像の縦幅を自動調整 */
 	  object-fit: cover;
 	}
+	.flex {
+		flex-direction: column;
+	  }
+	  .image {
+		max-width: 100%;
+		text-align: center;
+	  }
+	
+	  
+	  
   }
   
   /* style.css */
@@ -345,6 +358,15 @@
 	background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒いオーバーレイ */
 	z-index: 11; /* ヘッダーサイトメニューより手前に表示するためのZ-index */
 	display: none;
+  }
+  .image-container1,
+  .image-container2 {
+    text-align: center;
+  }
+  .image-container1 img,
+  .image-container2 img {
+    width: 100%;
+    height: auto;
   }
   
   .header-site-menu.active + .overlay {
